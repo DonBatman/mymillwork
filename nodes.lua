@@ -362,6 +362,25 @@ mymillwork.nodes = {
       },
     },
 
+
+    { suffix = "beam_ceiling",
+      model  = "mymillwork_mach25.obj",
+      mdesc  = "Beam with Ceiling",
+      sbox   = { type = "fixed",
+                 fixed = {{-0.25, -0.5, -0.5, 0.25, -0.25, 0.5},
+							{-0.25, -0.5, -0.5, -0.1875, -0.1875, 0.5},
+							{0.1875, -0.5, -0.5, 0.25, -0.1875, 0.5},
+							{-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+                 }
+      },
+      cbox   = { type = "fixed",
+                 fixed = {{-0.25, -0.5, -0.5, 0.25, -0.25, 0.5},
+							{-0.25, -0.5, -0.5, -0.1875, -0.1875, 0.5},
+							{0.1875, -0.5, -0.5, 0.25, -0.1875, 0.5},
+							{-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+                 }
+      },
+    },
 }
 
 function mymillwork.register(material, node_suffix, desc, image, group)
