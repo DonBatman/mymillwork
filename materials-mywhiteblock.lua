@@ -27,14 +27,14 @@ for i in ipairs(block_table) do
 
 
 mymillwork.register("mywhiteblock:block_"..mat,
-	"myores_"..mat,
+	"mywhiteblock_"..mat,
 	des.." Block",
 	img,
 	{crumbly = 1, cracky = 3, not_in_creative_inventory = 1}
 )
 end
 mymillwork.register("mywhiteblock:block",
-	"myores_white",
+	"mywhiteblock_white",
 	"White Block",
 	"mywhiteblock_white.png",
 	{crumbly = 1, cracky = 3, not_in_creative_inventory = 1}
