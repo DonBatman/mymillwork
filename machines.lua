@@ -84,6 +84,7 @@ on_construct = function(pos)
 		"image_button[2.5,4;1,1;mymillwork_mach16.png;beam; ]"..
 		"image_button[3.5,4;1,1;mymillwork_mach17.png;beam_t; ]"..
 		"image_button[4.5,4;1,1;mymillwork_mach18.png;beam_ceiling_t; ]"..
+		"image_button[5.5,4;1,1;mymillwork_mach25.png;beam_ceiling; ]"..
 
 		"label[0.5,5;Base]"..
 		"image_button[0.5,5.5;1,1;mymillwork_mach19.png;base; ]"..
@@ -127,6 +128,7 @@ or fields["base_oc"]
 or fields["base_fancy"]
 or fields["base_fancy_ic"]
 or fields["base_fancy_oc"]
+or fields["beam_ceiling"]
 then
 
 	if inv:is_empty("ingot") then
@@ -261,6 +263,11 @@ then
 		make_ok = "0"
 		anzahl = "8"
 		shape = "mymillwork:base_fancy_oc_"
+
+	elseif fields["beam_ceiling"] then
+		make_ok = "0"
+		anzahl = "8"
+		shape = "mymillwork:beam_ceiling_"
 	end
 
 		local ingotstack = inv:get_stack("ingot", 1)
