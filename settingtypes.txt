@@ -1,0 +1,11 @@
+
+#Enable supported mods
+mymillwork.bakedclay(Enable bakedclay) bool true
+mymillwork.ethereal(Enable ethereal) bool true
+mymillwork.moreblocks(Enable moreblocks) bool true
+mymillwork.myores(Enable myores) bool true
+mymillwork.mywhiteblock(Enable mywhiteblock) bool true
+mymillwork.my_door_wood(Enable my_door_wood) bool true
+mymillwork.mymulch(Enable mymulch) bool true
+mymillwork.moretrees(Enable moretrees) bool true
+

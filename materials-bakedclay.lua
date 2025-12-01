@@ -4,7 +4,7 @@
 -- It makes sense to group it all here.
 
 -- full bakedclay assortment
-if minetest.get_modpath("bakedclay") then
+if core.get_modpath("bakedclay") then
 
 	local clay = {
 		{"white", "White"},
@@ -34,7 +34,7 @@ if minetest.get_modpath("bakedclay") then
 	end
 
 -- 3 types of bakedclay present in ethereal
-elseif minetest.get_modpath("ethereal") then
+elseif core.get_modpath("ethereal") then
 
 	local clay = {
 		{"grey", "Grey"},

@@ -81,7 +81,7 @@ for _, entry in ipairs(block_table) do
 	local desc = entry[2]
 	local paint = entry[3]
 
-minetest.register_node("mymillwork:block_" .. color, {
+core.register_node("mymillwork:block_" .. color, {
 	description = desc .. " Block",
 	tiles = {paint},
 	is_ground_content = false,
@@ -90,7 +90,7 @@ minetest.register_node("mymillwork:block_" .. color, {
 })
 
 end
-if minetest.get_modpath("mypaint") then
+if core.get_modpath("mypaint") then
 local colors = {}
 for _, entry in ipairs(block_table) do
 	table.insert(colors, entry[1])

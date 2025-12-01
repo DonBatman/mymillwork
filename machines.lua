@@ -4,7 +4,7 @@ local make_ok = {}
 local anzahl = {}
 
 
-minetest.register_node("mymillwork:machine", {
+core.register_node("mymillwork:machine", {
 	description = "Millwork Machine",
 	tiles = {
 		"mymillwork_machine_top.png",
@@ -36,13 +36,13 @@ minetest.register_node("mymillwork:machine", {
 	},
 
 	after_place_node = function(pos, placer)
-	local meta = minetest.get_meta(pos);
+	local meta = core.get_meta(pos);
 			meta:set_string("owner",  (placer:get_player_name() or ""));
 			meta:set_string("infotext",  "Millwork Machine (owned by " .. (placer:get_player_name() or "") .. ")");
 		end,
 
 can_dig = function(pos,player)
-	local meta = minetest.get_meta(pos);
+	local meta = core.get_meta(pos);
 	local inv = meta:get_inventory()
 	if not inv:is_empty("ingot") or
 	not inv:is_empty("res") then
@@ -52,7 +52,7 @@ can_dig = function(pos,player)
 end,
 
 on_construct = function(pos)
-	local meta = minetest.get_meta(pos)
+	local meta = core.get_meta(pos)
 	meta:set_string("formspec", "invsize[10,11;]"..
 		"background[-0.15,-0.25;10.40,11.75;mymillwork_background.png]"..
 		"list[current_name;ingot;7,5.5.5;1,1;]"..
@@ -101,7 +101,7 @@ on_construct = function(pos)
 end,
 
 on_receive_fields = function(pos, formname, fields, sender)
-	local meta = minetest.get_meta(pos)
+	local meta = core.get_meta(pos)
 	local inv = meta:get_inventory()
 
 if fields["crownmould"]
@@ -287,7 +287,7 @@ then
 			for i = 0, anzahl-1 do
 				give[i+1]=inv:add_item("res",shape..material)
 			end
-			if not minetest.setting_getbool("creative_mode") then
+			if not core.setting_getbool("creative_mode") then
 				ingotstack:take_item()
 			end
 			inv:set_stack("ingot",1,ingotstack)
@@ -301,7 +301,7 @@ end
 
 --Craft
 
-minetest.register_craft({
+core.register_craft({
 		output = 'mymillwork:machine',
 		recipe = {
 			{'', 'default:steel_ingot',''},
