@@ -9,11 +9,9 @@ local block_table = {
 	{"spruce",       "Spruce Tree"},
 	{"cedar",        "Cedar Tree"},
 	{"poplar",       "Poplar Tree"},
-	{"poplar_small", "Poplar Tree"},
 	{"willow",       "Willow Tree"},
 	{"rubber_tree",  "Rubber Tree"},
 	{"fir",          "Douglas Fir"},
-	{"jungletree",   "Jungle Tree"},
 }
 
 
