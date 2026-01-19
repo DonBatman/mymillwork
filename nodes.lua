@@ -408,5 +408,9 @@ function mymillwork.register_all(suffix, model, mdesc, sbox, cbox, node_suffix, 
     })
 
     table.insert(mymillwork.registered, {material, node_suffix})
-
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mymillwork:" .. suffix .. "_" .. node_suffix}, 10},
+	})
+end
 end
